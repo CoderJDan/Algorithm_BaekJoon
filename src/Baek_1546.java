@@ -1,8 +1,4 @@
-/*
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
+import java.io.*;
 
 public class Baek_1546 {
     public static void main(String[] args) throws IOException {
@@ -13,18 +9,12 @@ public class Baek_1546 {
 
         int sum = 0;
         int max = 0;
-        float avg = 0;
 
-        for(int i=0; i<N; i++) {
-            if(Integer.parseInt(data[i])>Integer.parseInt(data[i+1])) {
-                sum = sum + Integer.parseInt(data[i]);
-                max = Integer.parseInt(data[i]);
-            }
-            else {
-                sum = sum + Integer.parseInt(data[i]);
-            }
+        for (int i = 0; i < N; i++) {
+            if (Integer.parseInt(data[i]) > max) max = Integer.parseInt(data[i]);
+            sum = sum + Integer.parseInt(data[i]);
         }
-        avg = (float) sum /max*100;
+
+        System.out.println(sum*100.0/max/N);
     }
 }
-*/
